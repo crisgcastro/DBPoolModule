@@ -38,11 +38,23 @@ public class DBPoolConfiguration {
      * DPoolConfiguration database pool configuration .
      */
     private DBPoolConfiguration dbPoolConfiguration;
+    /**
+     * default pool size .
+     */
+    private static final int DEFAULT_POOL_SIZE = 50;
+    /**
+     * default cache size .
+     */
+    private static final int DEFAULT_MIN_CACHE = 10;
 
     /**
      * Default constructor .
      **/
-    public DBPoolConfiguration() {}
+    public DBPoolConfiguration() {
+
+        this.maxPoolSize = DEFAULT_POOL_SIZE;
+        this.minPoolCache = DEFAULT_MIN_CACHE;
+    }
 
     /**
      * Method for getting database driver.

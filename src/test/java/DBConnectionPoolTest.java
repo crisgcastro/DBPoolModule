@@ -35,6 +35,7 @@ public class DBConnectionPoolTest {
 
     }
 
+
     @Test
     public void throwExceptionAfterReferencingClosedConnection() throws
             SQLException, DBPoolException {
@@ -53,6 +54,7 @@ public class DBConnectionPoolTest {
         dbcpBuilderMock.setConfiguration(dbPoolConfigurationMock);
 
         DBConnectionPool dbConnectionPool = dbcpBuilderMock.build();
+        
         Connection connection = dbConnectionPool.getConnection();
         connection.close();
 
@@ -70,6 +72,8 @@ public class DBConnectionPoolTest {
         }
 
     }
+
+
 
 
 
