@@ -17,6 +17,8 @@ The connection pool is governed under the following behavior: The stack is initi
 The project use Maven(3.3.9v); the code is developed under the rules of the Maven checkstyle. Thus, this includes dependencies for the development of the unit tests such as [junit](https://mvnrepository.com/artifact/junit/junit/4.11), [org.mockito](https://mvnrepository.com/artifact/org.mockito/mockito-core/1.9.5), [com.googlecod.catch-exception](https://mvnrepository.com/artifact/com.googlecode.catch-exception/catch-exception) and [org.assertj](https://mvnrepository.com/artifact/org.assertj/assertj-core/1.5.0)
 
 # Set up
+It's recommended to use Maven for the use of this library. Use '''mvn install''' to build the project and run the unit tests.
+
 # How to use?
 # License 
 
