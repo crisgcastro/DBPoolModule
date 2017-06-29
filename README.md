@@ -21,7 +21,7 @@ It's recommended to use Maven for the use of this library. Use ```mvn install```
 
 # How to use?
 
-Using the DBCPBuilder class is possible to obtain a connection pool object (DBConnectionPool). The recommended usage is the following:
+Using the DBCPBuilder class is possible to obtain a connection pool object (DBConnectionPool). It's recommeded to use the try with resources approach as the following snippet.
 
 ``` 
 public DBConnectionPool getDBConnectionPool() throws SQLException, DBPoolException {
