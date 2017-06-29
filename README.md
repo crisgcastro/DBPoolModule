@@ -20,6 +20,38 @@ The project use Maven(3.3.9v); the code is developed under the rules of the Mave
 It's recommended to use Maven for the use of this library. Use ```mvn install``` to build the project and run the unit tests.
 
 # How to use?
+
+Using the DBCPBuilder class is possible to obtain a connection pool object (DBConnectionPool). The recommended usage is the following:
+
+``` 
+public DBConnectionPool getDBConnectionPool() throws SQLException, DBPoolException {
+      DBPoolConfiguration dbPoolConfiguration = new DBPoolConfiguration();
+      dbPoolConfiguration.setDbusername(USERNAME);
+      dbPoolConfiguration.setDbpassword(PASSWORD);
+      dbPoolConfiguration.setDburl(URL);
+      dbPoolConfiguration.setDbdriver(DRIVER);
+      dbPoolConfiguration.setMinPoolCache(MIN_POOL_CACHE);
+      dbPoolConfiguration.setMaxPoolSize(MAX_POOL_SIZE);
+      
+      DBCPBuilder dbcpBuilder = new DBCPBuilder();
+      dbcpBuilder.setConfiguration(dbPoolConfiguration);
+      
+      return dbcpBuilder.build();
+}
+    
+public void managePool() throws SQLException, DBPoolException {
+      
+      try (Connection con = getDBConnectionPool().getConnection();
+           Statement st = con.createStatement();
+           ResultSet res = st.executeQuery("…"))
+      {
+          // Connection usage
+        
+      }
+      
+}
+    
+```
 # License 
 
 DBPoolModule is available under the license Apache License 2.0. More information read  [license](https://choosealicense.com/licenses/)
