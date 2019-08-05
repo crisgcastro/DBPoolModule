@@ -3,10 +3,9 @@ Garage payment system - connection pool module
 
 # Summary
 
-The DBPoolModule library consists in a “database connection pool” in Java programming language. The use of this “database connection pool” improves considerably the performance of  applications. Since, it is not necessary to obtain connections directly from the database whenever a client wants to use a java.sql.Connection object type.So connections are acquired from a  previously initialized connection pool. This connection are return to the pool when the clients complete their use. 
+The DBPoolModule library consists in a “database connection pool” in Java programming language. The use of this “database connection pool” improves considerably the performance of  applications, since it's not necessary to obtain connections directly from the database when a client wants to use a java.sql.Connection object type. Then, the connections are acquired from a  previously initialized connection pool. Finally, this connection is returned to the pool. 
 
-The library provides the necessary features to obtain the connection pool, starting from the Database Connection Pool Builder (DBCPBuilder). In addition, to instantiation a pool of  connections it is necessary to create a configuration object (DBPoolConfiguration) where the database resources(user, password, url, driver). Also, it is necessary to establish a “minimium amount of connections to cache at any time" and a "maximium amount of outstanding connections
-“.
+The library provides the required features to create a new connection pool, starting from the Database Connection Pool Builder (DBCPBuilder). In addition, to instantiate a pool of  connections it is necessary to create a configuration object (DBPoolConfiguration) with the database resources(user, password, url, driver). Also, it is necessary to establish a “minimium amount of connections to cache at any time" and a "maximium amount of outstanding connections“.
 
 # DBPoolModuleBehavior
 
